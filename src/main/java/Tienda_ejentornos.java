@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author david
  */
-public class Tienda {
+public class Tienda_ejentornos {
 
 	/**
 	 * @param args

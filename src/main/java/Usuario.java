@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -37,9 +40,7 @@ public class Usuario {
     }
     
     public void setnombre(String nombre){
-        if(nombre<6){
-            
-        }
+        
         this.nombre=nombre;
        
     }
@@ -48,22 +49,41 @@ public class Usuario {
         return password;
     }
     
-    public void setpassword(String password){
-        
+    public void setpassword(){
         
         this.password=password;
-      
+        
     }
     
     public String getemail(){
         return email;
     }
     
-    public void setemail(String email){
+    public void setemail(){
+
         this.email=email;
-        
     }
     
 
-    
+public static boolean password(String pwd) {
+        //(['65'-'90'])
+        //pwd = "pePe199";
+        //        boolean validar=true;
+        //        
+        //        if (pwd.length() >= 8 && pwd.matches("([A-Z])") == false) 
+        //            ok=false;
+
+        return pwd.length() >= 8 && pwd.matches("([A-Z])");
+    }
+
+public boolean email(){
+   // coincidencia = false cuando no haya un 0
+   if(email.matches("[a-zA-Z][^(@)]+")== false){
+       
+       return true;
+   }else{
+       return false;
+   }
+
+    }
 }
